@@ -5,7 +5,7 @@ Content-Type: application/json
 {
     "firstName":"jhon",
      "lastName":"bill", 
-     "email":"jhon@gmail.com", 
+     "email":"jhon111@gmail.com", 
      "password":"123456"
 }
 
@@ -14,22 +14,7 @@ POST http://localhost:5000/api/auth/login
 Content-Type: application/json
 
 {
-     "email":"bill@gmail.com", 
+     "email":"jhon111@gmail.com", 
      "password":"123456"
     
 }
-
-###Forgot Password
-POST http://localhost:5000/api/auth/forgotPassword
-Content-Type: application/json
-
-{
-     "email":"kumar@gmail.com", 
-     "newPassword":"1234567"
-    
-}
-
-###matchToken
-GET http://localhost:5000/api/people/getPeople/6160068a9f774d9bc5620913
-Content-Type: application/json
-Authorization: token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMzcwNWZhOTE4Y2RmMzMzODEzNGY5NyIsImlhdCI6MTYzMDk5ODE0MiwiZXhwIjoxNjMxMTcwOTQyfQ.br0Xx3VjWUsPj8NW-p3crYTofBDec8hL2GhGXa05L8E

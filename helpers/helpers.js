@@ -1,9 +1,9 @@
-// import crypto from "crypto";
-
+//Module Import
 const bcrypt = require("bcryptjs");
 const UserModel = require("../models/User");
 
 class Helper {
+  // Method to check if user exist or not
   async checkUserExists(email) {
     return new Promise(async (resolve, reject) => {
       try {
@@ -15,6 +15,7 @@ class Helper {
     });
   }
 
+  // Method to match the credentials of the user
   async matchCredentials(email, password) {
     const userExists = await this.checkUserExists(email);
     let status = {};

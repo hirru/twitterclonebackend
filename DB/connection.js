@@ -1,6 +1,7 @@
-﻿const mongoose = require("mongoose");
-// const AWS = require("aws-sdk");
+﻿//Import Module
+const mongoose = require("mongoose");
 
+//Connecting to a mongoDB database
 const connectWithRetry = () =>
   mongoose
     .connect(
@@ -20,19 +21,8 @@ const connectWithRetry = () =>
       setTimeout(connectWithRetry, 5000);
     });
 
-// export default connectWithRetry;
-// var aws_remote_config = {
-//   accessKeyId: "AKIASPMLHTSKXRDFW4PN",
-//   secretAccessKey: "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",
-//   region: "us-east-2",
-// };
-// AWS.config.update(aws_remote_config);
 var dbConfig = {
   mysqlConfig: connectWithRetry(),
-  // conf: aws_remote_config,
-  // s3Config: new AWS.S3(),
-  // ses: new AWS.SES({ apiVersion: "2010-12-01" }),
 };
 
-// export default dbConfig;
 module.exports = dbConfig;
